@@ -43,3 +43,8 @@ VOLUME /artifactory/logs
 VOLUME /artifactory/backup
 
 WORKDIR /artifactory
+
+
+
+ADD https://jdbc.postgresql.org/download/postgresql-9.4-1201.jdbc41.jar /usr/local/tomcat/lib/postgresql-9.4-1201.jdbc41.jar
+VOLUME /consul-data
