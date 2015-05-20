@@ -44,3 +44,6 @@ Now build your child docker image:
 The `ONBUILD` trigger makes sure that your `artifactory.war` is picked up and applied to the image upon build.
 
     docker run -P yourname/myartifactory
+=======
+# artifactory
+artifactory
