@@ -1,4 +1,5 @@
 artifactory.lic
+artifactory.war
 postgresql.conf
 Dockerfile.bak
 artifactory.config.import.xml
