@@ -7,8 +7,9 @@ ADD run.sh /usr/local/bin/run
 #ADD artifactory.lic /artifactory/etc/artifactory.lic
 #ADD artifactory.config.import.xml /artifactory/etc/artifactory.config.import.xml
 ADD http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar /tomcat/lib/postgresql-9.3-1102.jdbc41.jar
-ADD https://dl.bintray.com/mitchellh/consul/0.4.1_linux_amd64.zip /consul.zip
-ADD https://dl.bintray.com/mitchellh/consul/0.4.1_web_ui.zip /consul-ui.zip
+ADD https://releases.hashicorp.com/consul-template/0.16.0/consul-template_0.16.0_linux_amd64.zip /tmp/consul-template.zip
+ADD https://releases.hashicorp.com/envconsul/0.6.1/envconsul_0.6.1_linux_amd64.zip /tmp/envconsul.zip
+
 
 RUN mv /var/lib/apt/lists* /tmp && \
     mv /var/cache/apt/archives/partial* /tmp && \
@@ -20,7 +21,8 @@ RUN mv /var/lib/apt/lists* /tmp && \
     update-locale LANG=en_US.UTF-8 && \
     chmod +x /usr/local/bin/run && \
     mkdir /artifactory/etc && \
-    unzip -d /usr/local/bin/ /consul.zip
+    unzip -d /usr/local/bin/ /tmp/consul.zip && \ 
+    unzip -d /usr/local/bin/ /tmp/consul-template.zip
 
 VOLUME /consul-data
 VOLUME /etc/consul.d
