@@ -1,0 +1,10 @@
+artifactory.lic
+postgresql.conf
+Dockerfile.bak
+artifactory.config.import.xml
+errors
+run.sh
+storage.properties
+Dockerfile.drone
+pg_hba.conf
+server.xml

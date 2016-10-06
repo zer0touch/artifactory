@@ -1,0 +1,10 @@
+{
+  "service": {
+      "name": "registry", "tags": ["alm","dev"], "port": 8081,
+      "check": {
+            "script": "curl localhost:8081 >/dev/null 2>&1", "interval": "10s"
+      }
+  }
+}
+
+

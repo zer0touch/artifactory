@@ -1,0 +1,10 @@
+{
+  "service": {
+      "name": "drone", "tags": ["alm","dev"], "port": 8082,
+      "check": {
+            "script": "curl localhost:8082 >/dev/null 2>&1", "interval": "10s"
+      }
+  }
+}
+
+
