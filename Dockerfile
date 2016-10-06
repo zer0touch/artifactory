@@ -9,7 +9,7 @@ ADD run.sh /usr/local/bin/run
 ADD http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar /tomcat/lib/postgresql-9.3-1102.jdbc41.jar
 ADD https://releases.hashicorp.com/consul-template/0.16.0/consul-template_0.16.0_linux_amd64.zip /tmp/consul-template.zip
 ADD https://releases.hashicorp.com/envconsul/0.6.1/envconsul_0.6.1_linux_amd64.zip /tmp/envconsul.zip
-
+ADD https://releases.hashicorp.com/consul/0.7.0/consul_0.7.0_linux_amd64.zip /consul.zip
 
 RUN mv /var/lib/apt/lists* /tmp && \
     mv /var/cache/apt/archives/partial* /tmp && \
@@ -22,7 +22,9 @@ RUN mv /var/lib/apt/lists* /tmp && \
     chmod +x /usr/local/bin/run && \
     mkdir /artifactory/etc && \
     unzip -d /usr/local/bin/ /tmp/consul.zip && \ 
-    unzip -d /usr/local/bin/ /tmp/consul-template.zip
+    unzip -d /usr/local/bin/ /tmp/consul-template.zip && \
+    unzip -d /usr/local/bin/ /tmp/envconsul.zip && \
+    rm -ffv /tmp/*.zip
 
 VOLUME /consul-data
 VOLUME /etc/consul.d
