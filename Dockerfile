@@ -3,9 +3,9 @@ FROM zer0touch/artifactory-base:latest
 MAINTAINER Ryan Harper <ryanharper007@zer0touch.co.uk>
 
 ADD run.sh /usr/local/bin/run
-ADD storage.properties /artifactory/etc/storage.properties
-ADD artifactory.lic /artifactory/etc/artifactory.lic
-ADD artifactory.config.import.xml /artifactory/etc/artifactory.config.import.xml
+#ADD storage.properties /artifactory/etc/storage.properties
+#ADD artifactory.lic /artifactory/etc/artifactory.lic
+#ADD artifactory.config.import.xml /artifactory/etc/artifactory.config.import.xml
 ADD http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar /tomcat/lib/postgresql-9.3-1102.jdbc41.jar
 ADD https://dl.bintray.com/mitchellh/consul/0.4.1_linux_amd64.zip /consul.zip
 ADD https://dl.bintray.com/mitchellh/consul/0.4.1_web_ui.zip /consul-ui.zip
