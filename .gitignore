@@ -7,4 +7,3 @@ errors
 storage.properties
 Dockerfile.drone
 pg_hba.conf
-server.xml
