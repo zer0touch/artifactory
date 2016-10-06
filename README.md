@@ -1,9 +1,16 @@
 # Artifactory
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.org/zer0touch/artifactory.svg?branch=master)](https://travis-ci.org/zer0touch/artifactory)
 
 Run [Artifactory](http://www.jfrog.com/home/v_artifactory_opensource_overview) inside a Docker container.
 
 Link: [zer0touch/artifactory-base](https://hub.docker.com/r/zer0touch/artifactory/)
+=======
+
+Run [Artifactory](http://www.jfrog.com/home/v_artifactory_opensource_overview) inside a Docker container.
+
+Link: [mattgruter/artifactory](https://registry.hub.docker.com/u/mattgruter/artifactory/)
+>>>>>>> 23349e923add5e0e863eba7ea611119348fc88cd
 
 
 ## Volumes
@@ -19,9 +26,19 @@ The web server is accessible through port `8080`.
 ## Example
 To run artifactory do:
 
+<<<<<<< HEAD
     docker run -p 8080:8080 zer0touch/artifactory
 
 Now point your browser to http://localhost:8080.
+=======
+    docker run -p 8080:8080 mattgruter/artifactory
+
+Now point your browser to http://localhost:8080
+
+
+## URLs
+The artifactory servlet is available at the `artifactory/` path. However a filter redirects all paths outside of `artifactory/` to the artifactory servlet. Thus instead of linking to the URL http://localhost:8080/artifactory/libs-release-local you can just link to http://localhost:8080/libs-release-local (i.e. omitting the subpath `artifactory/`).
+>>>>>>> 23349e923add5e0e863eba7ea611119348fc88cd
 
 ## Runtime options
 Inject the environment variable `RUNTIME_OPTS` when starting a container to set Tomcat's runtime options (i.e. `CATALANA_OPTS`). The most common use case is to set the heap size:
@@ -32,7 +49,11 @@ Inject the environment variable `RUNTIME_OPTS` when starting a container to set 
 If you are using Artifactory Pro, the artifactory war archive has to be replaced. The Dockerfile includes a `ONBUILD` trigger for this purpose. Unpack the Artifactory Pro distribution ZIP file and place the file `artifactory.war` (located in the `webapps` subdirectory) in the same directory as a simple Dockerfile that extends this image:
 
     # Dockerfile for Artifactory Pro
+<<<<<<< HEAD
     FROM zer0touch/artifactory
+=======
+    FROM mattgruter/artifactory
+>>>>>>> 23349e923add5e0e863eba7ea611119348fc88cd
 
 Now build your child docker image:
 
@@ -41,3 +62,9 @@ Now build your child docker image:
 The `ONBUILD` trigger makes sure that your `artifactory.war` is picked up and applied to the image upon build.
 
     docker run -P yourname/myartifactory
+<<<<<<< HEAD
+=======
+=======
+# artifactory
+artifactory
+>>>>>>> 23349e923add5e0e863eba7ea611119348fc88cd
