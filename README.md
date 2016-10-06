@@ -3,7 +3,7 @@
 
 Run [Artifactory](http://www.jfrog.com/home/v_artifactory_opensource_overview) inside a Docker container.
 
-Link: [zer0touch/artifactory-base](https://hub.docker.com/r/zer0touch/artifactory/)
+Link: [zer0touch/artifactory](https://hub.docker.com/r/zer0touch/artifactory/)
 =======
 
 Run [Artifactory](http://www.jfrog.com/home/v_artifactory_opensource_overview) inside a Docker container.
